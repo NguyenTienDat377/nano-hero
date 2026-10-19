@@ -1,0 +1,38 @@
+{
+  "model": {
+    "vocab_size": 49152,
+    "n_layer": 30,
+    "d_model": 576,
+    "n_head": 9,
+    "n_kv_head": 3,
+    "d_ff": 1536,
+    "rope_theta": 10000.0,
+    "norm_eps": 1e-05,
+    "max_seq_len": 1024,
+    "tie_embeddings": true
+  },
+  "train": {
+    "data_dir": "data",
+    "out_dir": "checkpoints",
+    "run_dir": "runs/v0_135m",
+    "seq_len": 1024,
+    "micro_batch_size": 4,
+    "grad_accum_steps": 32,
+    "total_tokens": 100000000,
+    "lr": 0.0006,
+    "min_lr": 0.0,
+    "weight_decay": 0.1,
+    "betas": [
+      0.9,
+      0.95
+    ],
+    "grad_clip": 1.0,
+    "warmup_steps": 50,
+    "decay_frac": 0.15,
+    "eval_every": 50,
+    "eval_batches": 20,
+    "ckpt_every": 200,
+    "seed": 1337,
+    "compile": true
+  }
+}

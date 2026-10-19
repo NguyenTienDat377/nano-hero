@@ -1,0 +1,11 @@
+# large / generated artifacts
+data/
+checkpoints/
+runs/
+
+# python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+.pytest_cache/
